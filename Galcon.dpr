@@ -1,7 +1,8 @@
 program Galcon;
 
 uses
-  Forms,
+  System.StartUpCopy,
+  FMX.Forms,
   UMain in 'UMain.pas' {frmMain},
   UGame in 'UGame.pas';
 
@@ -12,4 +13,5 @@ begin
   Application.CreateForm(TfrmMain, frmMain);
   Application.Run;
 end.
+
 

@@ -11,7 +11,6 @@ object frmMain: TfrmMain
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   OnMouseDown = FormMouseDown
@@ -22,8 +21,7 @@ object frmMain: TfrmMain
   TextHeight = 13
   object Timer1: TTimer
     Interval = 25
-    OnTimer = Timer1Timer
-    Left = 24
-    Top = 16
+    Left = 640
+    Top = 360
   end
 end
