@@ -3,7 +3,7 @@ unit UGame;
 
 interface
 
-uses Classes, SysUtils
+uses System.Classes, System.SysUtils
 {$IFDEF GENERICS} System.Generics.Collections, System.Generics.Defaults
   {$ENDIF};
 

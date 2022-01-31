@@ -22,7 +22,7 @@ uses
 {$IFDEF MSWINDOWS}
   Windows
 {$ELSE}
-  SysUtils
+  SysUtils,System.IOUtils
 {$ENDIF};
 
 type
@@ -1002,7 +1002,7 @@ function BASS_FXGetParameters(handle: HFX; par: Pointer): BOOL; {$IFDEF MSWINDOW
 
 function BASS_FXReset(handle: HFX): BOOL; {$IFDEF MSWINDOWS} stdcall{$ELSE} cdecl{$ENDIF}; external bassdll;
 
-function BASS_SPEAKER_N(n: DWORD): DWORD;
+function BASS_SPEAKER_N(n: DWORD): DWORD;overload;
 
 {$IFDEF MSWINDOWS}
   function BASS_SetEAXPreset(env: LongInt): BOOL;
@@ -1148,8 +1148,10 @@ var
   BASS_FXSetParameters: function(handle: HFX; par: Pointer): BOOL; {$IFDEF MSWINDOWS}stdcall{$ELSE}cdecl{$ENDIF};
   BASS_FXGetParameters: function(handle: HFX; par: Pointer): BOOL; {$IFDEF MSWINDOWS}stdcall{$ELSE}cdecl{$ENDIF};
   BASS_FXReset: function(handle: HFX): BOOL; {$IFDEF MSWINDOWS}stdcall{$ELSE}cdecl{$ENDIF};
-
-function BASS_SPEAKER_N(n: Cardinal): Cardinal;
+ //type
+   //BASS = class
+//function BASS_SPEAKER_N(n: Cardinal): Cardinal;overload;
+   //end;
 
  {$IFDEF MSWINDOWS}
   function BASS_SetEAXPreset(env: LongInt): BOOL;
